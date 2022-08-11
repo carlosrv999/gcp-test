@@ -3,22 +3,16 @@ variable "network_name" {
   description = "Name of the network"
 }
 
-variable "subnet_1_ipv4_cidr_range" {
-  type = string
-  description = "CIDR range for subnet 1"
-  default = "10.100.0.0/24"
+variable "public_subnets" {
+  type = list(string)
+  description = "CIDR ranges for public subnets"
+  default = []
 }
 
-variable "subnet_2_ipv4_cidr_range" {
+variable "public_subnet_suffix" {
   type = string
-  description = "CIDR range for subnet 2"
-  default = "10.100.1.0/24"
-}
-
-variable "subnet_3_ipv4_cidr_range" {
-  type = string
-  description = "CIDR range for subnet 3"
-  default = "10.100.2.0/24"
+  description = "suffix of public subnets"
+  default = "public-tf"
 }
 
 variable "region" {
