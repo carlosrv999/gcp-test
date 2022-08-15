@@ -1,5 +1,5 @@
 module "network" {
-  source = "./modules/network"
+  source = "git::https://github.com/carlosrv999/sample-module.git"
 
   network_name = "vpc-carlos"
   public_subnets = [
