@@ -37,10 +37,10 @@ resource "google_compute_firewall" "vpc_emojiapp" {
 
 resource "google_compute_instance" "default" {
   name         = "test"
-  machine_type = "e2-medium"
+  machine_type = "n2-standard-2"
   zone         = "us-central1-c"
 
-  boot_disk {
+  boot_disk { #tfsec:ignore:google-compute-vm-disk-encryption-customer-key
     auto_delete = true
     initialize_params {
       image = "debian-cloud/debian-11"
