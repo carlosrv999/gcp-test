@@ -10,6 +10,7 @@ terraform {
 }
 
 provider "google" {
-  project = "agile-terra-359116"
-  region  = "us-central1"
+  project     = "agile-terra-359116"
+  region      = "us-central1"
+  credentials = var.gcp-creds
 }
