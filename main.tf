@@ -16,7 +16,7 @@ resource "google_service_account" "default" {
   display_name = "Carlos Service Account"
 }
 
-resource "google_compute_firewall" "vpc_emojiapp" {
+resource "google_compute_firewall" "default" {
   name    = "ssh"
   network = module.network.network_name
 
