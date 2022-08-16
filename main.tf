@@ -48,7 +48,7 @@ resource "google_compute_instance" "default" {
   }
 
   network_interface {
-    network = module.network.network_name
+    network    = module.network.network_name
     subnetwork = module.network.public_subnets_names[0]
 
     access_config {
